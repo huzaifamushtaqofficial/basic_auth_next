@@ -41,10 +41,10 @@ npm install  # or yarn install
 
 ### 3. Environment variables
 
-Create a file named `.env.local` in the project root and add:
+Create a file named `.env` in the project root and add:
 
 ```bash
-MONGODB_URI=your_mongodb_connection_string
+MONGODB_URL=your_mongodb_connection_string
 JWT_SECRET=your_jwt_secret_key
 EMAIL_HOST=your_smtp_host
 EMAIL_PORT=your_smtp_port

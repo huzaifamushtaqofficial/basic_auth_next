@@ -1,23 +1,26 @@
 import { NextResponse } from "next/server";
 
 export function middleware(request) {
-  const path = request.nextUrl.pathname;
+  const { pathname } = request.nextUrl;
 
-  // ✅ Always put "/" at start
-  const isPublicPath =
-    path === "/signup" || path === "/login" || path === "/" || path === "/verifyemail";
+  // Token from cookies
+  const token = request.cookies.get("token")?.value;
 
-  const token = request.cookies.get("token")?.value || "";
-
-  if (token && isPublicPath) {
-    return NextResponse.redirect(new URL("/profile", request.url));
+  // Protected routes start with /profile
+  if (pathname.startsWith("/profile")) {
+    if (!token) {
+      // Redirect guest to login
+      return NextResponse.redirect(new URL("/login", request.url));
+    }
+    // Token exists → allow access
+    return NextResponse.next();
   }
 
-  if (!token && !isPublicPath) {
-    return NextResponse.redirect(new URL("/login", request.url));
-  }
+  // All other routes are public → allow
+  return NextResponse.next();
 }
 
+// Apply middleware only to /profile/*
 export const config = {
-  matcher: ["/profile/:path*", "/", "/login", "/signup", "/verifyemail"],
+  matcher: ["/profile/:path*"],
 };
