@@ -3,7 +3,6 @@
 <div align="center">
 
 [![Next JS](https://img.shields.io/badge/-NextJS-000000?style=for-the-badge\&logo=next.js\&logoColor=white)](https://nextjs.org/)
-[![TypeScript](https://img.shields.io/badge/-TypeScript-3178C6?style=for-the-badge\&logo=typescript\&logoColor=white)](https://www.typescriptlang.org/)
 [![Tailwind CSS](https://img.shields.io/badge/-TailwindCSS-38B2AC?style=for-the-badge\&logo=tailwind-css\&logoColor=white)](https://tailwindcss.com/)
 
 A simple **Basic Authentication System** built with Next.js using JWT, bcrypt, and Nodemailer for email functionality.
