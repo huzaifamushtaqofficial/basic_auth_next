@@ -49,6 +49,7 @@ EMAIL_HOST=your_smtp_host
 EMAIL_PORT=your_smtp_port
 EMAIL_USER=your_email_address
 EMAIL_PASS=your_email_password
+DOMAIN=http://localhost:3000
 ```
 
 ### 4. Run the development server
