@@ -6,8 +6,8 @@ connectDB();
 
 export async function GET(request, context) {
   try {
-    const { id } = await context.params; // 🔑 params ko await karo
-    const user = await User.findById(id).select("-password"); // ✅ Hide password
+    const { id } = await context.params; 
+    const user = await User.findById(id).select("-password"); 
 
     if (!user) {
       return NextResponse.json({ message: "User not found" }, { status: 404 });

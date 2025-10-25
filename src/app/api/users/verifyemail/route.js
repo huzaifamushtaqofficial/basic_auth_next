@@ -8,7 +8,7 @@ export async function POST(request) {
     try {
         const reqBody = await request.json();
         const { token } = reqBody;
-        console.log("Received Token:", token);
+       
 
         if (!token) {
             return NextResponse.json(

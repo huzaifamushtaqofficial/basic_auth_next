@@ -43,11 +43,11 @@ npm install  # or yarn install
 Create a file named `.env` in the project root and add:
 
 ```bash
-MONGODB_URL=your_mongodb_connection_string
+MONGO_URL=mongodb://127.0.0.1:27017/basic_auth_next
 JWT_SECRET=your_jwt_secret_key
-EMAIL_HOST=your_smtp_host
-EMAIL_PORT=your_smtp_port
-EMAIL_USER=your_email_address
+EMAIL_HOST=smtp.gmail.com
+EMAIL_PORT=465
+EMAIL_USER=your_email@gmail.com
 EMAIL_PASS=your_email_password
 DOMAIN=http://localhost:3000
 ```

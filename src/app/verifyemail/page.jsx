@@ -39,7 +39,7 @@ export default function VerifyEmailPage() {
     if (verified) {
       setTimeout(() => {
         router.push("/login");
-      }, 1500); // thora delay tak user ko success msg dikhe
+      }, 1500); 
     }
   }, [verified, router]);
 
